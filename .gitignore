@@ -1,5 +1,2 @@
-out
-dist
+default
 node_modules
-.vscode-test/
-*.vsix
