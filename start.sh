@@ -20,6 +20,7 @@ else
     cp ../assets/core.scss ./src/core.scss
     cp ../assets/webpack.config.js ./webpack.config.js
     cp ../assets/.gitignore ./.gitignore
+    sed 's/"scripts": {/"scripts": {\n    "build": "webpack"/' package.json
     npm init -y
     npm install webpack webpack-cli sass --save-dev
     npm install normalize.css
