@@ -11,3 +11,7 @@ For now,you can just move the new directory
 to the location you want.
 
     mv <DIRECTORY>
+
+## TODO
+
+Get rid of duplicate code in scripts
