@@ -28,5 +28,6 @@ else
     npm install normalize.css
     sass src/index.scss dist/style.css
     sed -i 's/"scripts": {/"scripts": {\n    "build": "webpack",/' package.json
+    sed -i 's/"scripts": {/"scripts": {\n    "start": "webpack-dev-server --open",/' package.json
 fi
 
