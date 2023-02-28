@@ -1,4 +1,5 @@
 default
-foo
+foo.*
+bar.*
 **/test*/**
 node_modules
