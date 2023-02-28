@@ -13,17 +13,13 @@ if [ -d "$NAME" ]; then
 else
     echo "Directory $NAME does not exist."
     mkdir $NAME
+    mkdir $NAME/src
+    mkdir $NAME/dist
+    ./copy-core.sh $NAME
     cd $NAME
-    mkdir src
-    mkdir dist
-    cp ../assets/index.html ./index.html
-    cp ../assets/index.js ./src/index.js
-    cp ../assets/second.js ./src/second.js
-    cp ../assets/style.css ./src/style.css
-    cp ../assets/index.scss ./src/index.scss
-    cp ../assets/core.scss ./src/core.scss
+    
     cp ../assets/webpack-two-mods.config.js ./webpack.config.js
-    cp ../assets/.gitignore ./.gitignore
+    
     npm init -y
     npm install webpack webpack-dev-server html-webpack-plugin webpack-cli sass --save-dev
     npm install normalize.css
@@ -31,4 +27,3 @@ else
     sed -i 's/"scripts": {/"scripts": {\n    "build": "webpack",/' package.json
     sed -i 's/"scripts": {/"scripts": {\n    "start": "webpack-dev-server --open",/' package.json
 fi
-
